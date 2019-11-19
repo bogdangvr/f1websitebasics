@@ -1,0 +1,416 @@
+@font-face {
+    font-family: "f1fontreg";
+    src: url(font/f1fontreg.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: "f1fontbold";
+    src: url(font/f1fontbold.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+*{
+	padding:0;
+	margin:0;
+	border:0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("img/background.jpg");
+  	background-repeat: repeat-y;
+  	background-attachment: fixed;
+  	background-color: #cccccc;
+}
+nav {
+	display: block;
+	position: sticky;
+	top:0;
+}
+nav>ul {
+	margin: 0 auto;
+	text-align: center;
+	background-color: rgb(225, 6, 0);
+	color:white;
+}
+nav ul li{
+	display: inline;
+	margin:0;
+	vertical-align: middle;
+	list-style-type:none;
+	display:inline-block;
+	padding:5px 25px;
+	position: relative;
+}
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-family: f1fontreg;
+	font-size: 20px;	
+	padding:15px 30px;
+}
+#homeButton{
+	width:10%;
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.toHover{
+	display: inline;
+	margin:0;
+	vertical-align: middle;
+	list-style-type:none;
+	display:inline-block;
+	position: relative;
+	transition: background-color 0.5s ease;
+	width:200px;
+	padding-bottom: 17px;
+	padding-top: 22px;
+}
+
+.toHover:hover{
+	background-color: rgb(21, 21, 30);
+}
+.dropdown{
+	transition: background-color 0.5s ease;
+	padding-bottom: 17px;
+	padding-top: 22px;
+	position:relative;
+	width:200px;
+}
+.dropdown:hover{
+	background-color: rgb(21, 21, 30);
+}
+
+.dropdownContent{
+	position:absolute;
+	left:0;
+	top:63px;
+	background-color: rgb(21, 21, 30);
+	list-style-type:none;
+	width:250px;
+	height:126px;
+	visibility: hidden;
+	padding-left:0;
+}
+.dropdownContent li{
+	padding-bottom: 17px;
+	padding-top: 22px;
+	width:200px;
+}
+nav li:hover .dropdownContent{
+	visibility: visible;
+	transition: opacity 0.5s ease;
+}
+.dropdownContent li:hover{
+	background-color: rgb(225, 6, 0);
+	transition: background-color 0.5s ease;
+}
+.dropdownContent a{
+	text-align: center;
+}
+@media screen and (max-width: 910px) {
+	nav ul li{
+		display: inline;
+		margin:0;
+		vertical-align: middle;
+		list-style-type:none;
+		display:inline-block;
+		padding:2px 15px;
+		position: relative;
+	}
+	nav ul li a {
+		text-decoration: none;
+		color: white;
+		font-family: f1fontreg;
+		font-size: 10px;	
+		padding:10px 15px;
+	}
+	#homeButton{
+		width:10%;
+		vertical-align: middle;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.toHover{
+		display: inline;
+		margin:0;
+		vertical-align: middle;
+		list-style-type:none;
+		display:inline-block;
+		position: relative;
+		transition: background-color 0.5s ease;
+		width:100px;
+		padding-bottom: 8px;
+		padding-top: 10px;
+	}
+
+	.toHover:hover{
+		background-color: rgb(21, 21, 30);
+	}
+	.dropdown{
+		transition: background-color 0.5s ease;
+		padding-bottom: 8px;
+		padding-top: 10px;
+		position:relative;
+		width:100px;
+	}
+	.dropdown:hover{
+		background-color: rgb(21, 21, 30);
+	}
+
+	.dropdownContent{
+		position:absolute;
+		left:0;
+		top:37px;
+		background-color: rgb(21, 21, 30);
+		list-style-type:none;
+		width:130px;
+		height:72px;
+		visibility: hidden;
+		padding-left:0;
+	}
+	.dropdownContent li{
+		padding-bottom: 8px;
+		padding-top: 10px;
+		width:100px;
+	}
+	nav li:hover .dropdownContent{
+		visibility: visible;
+		transition: opacity 0.5s ease;
+	}
+	.dropdownContent li:hover{
+		background-color: rgb(225, 6, 0);
+		transition: background-color 0.5s ease;
+	}
+	.dropdownContent a{
+		text-align: center;
+	}
+}
+
+
+#pageTitle{
+	font-family: "f1fontreg";
+	color:black;
+	font-size:5vw;
+	padding-top:5vh;
+	padding-left:5vh;
+}
+#teams{
+	margin: auto;
+  	padding-top: 5vh;
+  	border-spacing:0;
+}
+.teamLogo{
+	width:10%;
+	display: block;
+ 	margin-left: auto;
+  	margin-right: auto;
+}
+.teamsCell{
+	width:40vw;
+	height:30vh;
+	padding:0;
+	border:0;
+	margin:0;
+	background-color: white;	
+}
+.rightColumn{
+	padding:0;
+	width:50vw;
+	height:30vh;
+}
+.cars{
+	width:100%;
+	border:0px;
+}
+.teamsNames{
+	font-family: "f1fontbold";
+	color:black;
+	font-size:2vw;
+	padding-top:1vh;
+	padding-bottom: 6vh;
+	padding-right: 2vw;
+	padding-left: 2vw;
+	display: inline-block;
+}
+.icon{
+	width: 3vw;	
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+.leftInnerColumn{
+	border:0;
+	width: 10%;
+}
+.rightInnerColumn{
+	border:0;
+	font-family: "f1fontreg";
+	color:black;
+	font-size:1.5vw;
+	padding-bottom: 0px;
+}
+.spaceBetween{
+	height:50px;
+}
+.teamLogo{
+	width:30%;
+	margin-left:3vw;
+	padding-top: 2vh;
+	padding-bottom: 0;
+	display: inline-block;
+}
+#middleColumn1{
+	background-color: rgb(0, 210, 190);
+	width:.4vw;
+	height:30vh;
+	padding:0;
+}
+#middleColumn2{
+	background-color: rgb(220, 0, 0);
+	width:5px;
+	padding:0;
+}
+#middleColumn3{
+	background-color: rgb(30, 65, 255);
+	width:5px;
+	padding:0;
+}
+#middleColumn4{
+	background-color: rgb(255, 135, 0);
+	width:5px;
+	padding:0;
+}
+#middleColumn5{
+	background-color: rgb(255, 245, 0);
+	width:5px;
+	padding:0;
+}
+#middleColumn6{
+	background-color: rgb(245, 150, 200);
+	width:5px;
+	padding:0;
+}
+#middleColumn7{
+	background-color: rgb(70, 155, 255);
+	width:5px;
+	padding:0;
+}
+#middleColumn8{
+	background-color: rgb(155, 0, 0);
+	width:5px;
+	padding:0;
+}
+#middleColumn9{
+	background-color: rgb(189, 158, 87);
+	width:5px;
+	padding:0;
+}
+#middleColumn10{
+	background-color: rgb(255, 255, 255);
+	width:5px;
+	padding:0;
+}
+
+#calendar{
+	display:flex;
+	flex-wrap: wrap;
+}
+figure{
+	padding:80px 80px;
+}
+figure img{
+	width:340px;
+}
+figcaption{
+	font-family: "f1fontreg";
+	color:black;
+	font-size:18px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+#clasament{
+	padding:30px 50px;
+	font-family: "f1fontreg";
+	color:black;
+	font-size:1em;
+}
+#clasament tr{
+	width:100%;
+}
+#clasament tr td{
+	width:20vw;
+	padding-top:10px;
+}
+#clasament tr:nth-of-type(2n) {
+	background-color: rgb(181,181,181);
+}
+#clasament tr:nth-of-type(2n+1) {
+	background-color: white;
+}
+#clasament2{
+	padding:30px 50px;
+	font-family: "f1fontreg";
+	color:black;
+	font-size:1em;
+}
+#clasament2 tr{
+	width:100%;
+}
+#clasament2 tr td{
+	width:25vw;
+	padding-top:10px;
+}
+#clasament2 tr:nth-of-type(2n) {
+	background-color: rgb(181,181,181);
+}
+#clasament2 tr:nth-of-type(2n+1) {
+	background-color: white;
+}
+#asterix{
+	font-family: "f1fontreg";
+	color:black;
+	font-size:1vw;
+	padding-top:5vh;
+	padding-left:5vh;
+}
+
+iframe{
+	padding-left: 30px;
+	padding-top: 10px;
+	width:80%;
+	height:50vh;
+}
+#newsText{
+	font-family: "f1fontreg";
+	color:black;
+	font-size:12px;
+	padding-top:30px;
+	padding-left:30px;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: justify;
+}
+#brazilphoto{
+	width: 45%;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+#divzindex1{
+	z-index: 1;
+	position: absolute;
+	padding: 30px;
+	background-color: white;
+}
+#divzindex2{
+	z-index: 2;
+	position: relative;
+	padding: 30px;
+	background-color: white;
+}
